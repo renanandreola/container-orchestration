@@ -1,0 +1,12 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
