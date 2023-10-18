@@ -1,0 +1,20 @@
+name: Docker Compose Automation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    
+    - name: Tear Down Docker Compose
+      run: docker-compose down
+
+    - name: Set up Docker Compose
+      run: docker-compose up -d
