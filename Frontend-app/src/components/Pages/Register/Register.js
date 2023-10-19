@@ -2,7 +2,7 @@ import './Register.css'
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Header from '../../Layout/Header';
- 
+
 function Register() {
   const [formData, setFormData] = useState({
     email: '',
