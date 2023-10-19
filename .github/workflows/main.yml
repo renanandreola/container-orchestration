@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Clear Node.js Cache
+      run: npm cache clean -f
+  
     - name: Setup Node.js
       uses: actions/setup-node@v2.6
       with:
@@ -40,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Clear Node.js Cache
+      run: npm cache clean -f
+      
     - name: Setup Node.js
       uses: actions/setup-node@v2.6
       with:
