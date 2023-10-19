@@ -28,6 +28,14 @@ jobs:
       working-directory: Frontend-app
       run: docker run -d -p 3000:3000 meu-front-end
 
+    - name: Run Frontend Docker Swarm
+      working-directory: Frontend-app
+      run: docker swarm init
+
+    - name: Create Frontend Docker Swarm Service
+      working-directory: Frontend-app
+      run: docker service create --name meu-front-end --replicas 3 -p 3000:3000 meu-front-end
+
   build-backend:
     runs-on: ubuntu-latest
 
@@ -49,3 +57,11 @@ jobs:
     - name: Run Backend Docker Container
       working-directory: Backend-app
       run: docker run -d -p 3030:3030 meu-backend
+
+    - name: Run Backend Docker Swarm
+      working-directory: Backend-app
+      run: docker swarm init
+
+    - name: Create Backend Docker Swarm Service
+      working-directory: Backend-app
+      run: docker service create --name meu-backend --replicas 3 -p 3030:3030 meu-backend
