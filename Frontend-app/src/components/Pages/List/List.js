@@ -25,7 +25,7 @@ export default (props) => {
             <>
                 <Header></Header>
 
-                <h1>Notas</h1>
+                <h1>Notas cadastradas</h1>
             
                 <div className='listing-tickers'>
                 <table className="table">
