@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        
     - name: Checkout Frontend Repository
       uses: actions/checkout@v2
       with:
@@ -35,6 +40,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        
     - name: Checkout Backend Repository
       uses: actions/checkout@v2
       with:
@@ -55,6 +65,3 @@ jobs:
     - name: Create Backend Docker Swarm Service
       working-directory: Backend-app
       run: docker service create --name meu-backend --replicas 3 -p 3030:3030 meu-backend
-
-    - name: Run Tests (if applicable)
-      # Execute seus testes, se necessário
