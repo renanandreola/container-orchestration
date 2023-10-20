@@ -30,20 +30,24 @@ function Register() {
   
       console.log("response", response);
 
-    //   if (response.data.status == 200) {
-
-    //   }
+      if (response.data.status == 200) {
+        alert("Nota cadastrada com sucesso!");
+      } else {
+        alert("Ops, ocorreu um erro ao cadastrar sua nota!");
+      }
       
-    //   setFormData({ 
-    //     email: '',
-    //     note: '',
-    //   })
+      setFormData({ 
+        email: '',
+        note: '',
+      })
       
     } catch (error) {
-    //   setFormData({
-    //     email: '',
-    //     note: '',
-    //   })
+      alert("Ops, ocorreu um erro!");
+
+      setFormData({
+        email: '',
+        note: '',
+      })
     }
   };
 
