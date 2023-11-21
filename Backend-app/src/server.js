@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+var teste;
 const insertNotes = require('./database/operations/insertNotes');
 const getNotes = require('./database/operations/getNotes');
 
