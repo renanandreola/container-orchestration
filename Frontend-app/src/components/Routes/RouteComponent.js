@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../Pages/Home/Home';
-import Register from '../Pages/Register/Register'
-import List from '../Pages/List/List';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "../Pages/Home/Home";
+import Register from "../Pages/Register/Register";
+import List from "../Pages/List/List";
 
-function RouteComponent() {
+const RouteComponent = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,6 +14,6 @@ function RouteComponent() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default RouteComponent;
