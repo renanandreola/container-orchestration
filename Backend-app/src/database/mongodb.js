@@ -1,12 +1,8 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const ACCESS_DB = require('../config/envDB')
-
-// const uri = "mongodb+srv://" + ACCESS_DB.DB_Credentials.Username + ":" + ACCESS_DB.DB_Credentials.Password + "@chatterbotcluster.cmwwli4.mongodb.net/Chatterbot_Database?retryWrites=true&w=majority";
-const uri = "mongodb+srv://" + ACCESS_DB.DB_Credentials.Username + ":" + ACCESS_DB.DB_Credentials.Password + "@clustercontainer.jvmcqej.mongodb.net/notes?retryWrites=true&w=majority";
+const uri = "";
 
 const client = new MongoClient(uri, { 
-    // useNewUrlParser: true, 
-    // useUnifiedTopology: true, 
     serverApi: ServerApiVersion.v1 
 });
 
