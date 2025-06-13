@@ -3,7 +3,7 @@ import Header from "../../Layout/Header";
 import "./Home.css";
 import { connect } from "react-redux";
 
-import updateMin from "../../../store/actions/numbers";
+import updateMin from "../../../store/actions/numbersAction";
 
 function Home(props) {
   console.log("props Home: ", props);
